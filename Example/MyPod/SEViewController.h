@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+#import <MyPod/StringeeClient.h>
 
 @interface SEViewController : UIViewController
 

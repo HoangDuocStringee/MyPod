@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MyPod'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MyPod.'
+  s.summary          = 'This is my description of MyPod.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,34 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This is my description of MyPod and it's awesome
                        DESC
 
-  s.homepage         = 'https://github.com/duochv@stringee.com/MyPod'
+  s.homepage         = 'https://github.com/HoangDuocStringee/MyPod'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'duochv@stringee.com' => 'hoangduoc20121540@gmail.com' }
-  s.source           = { :git => 'https://github.com/duochv@stringee.com/MyPod.git', :tag => s.version.to_s }
+  s.author           = { 'HoangDuoc' => 'hoangduoc20121540@gmail.com' }
+  s.source           = { :git => 'https://github.com/HoangDuocStringee/MyPod.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.requires_arc = true
 
-  s.source_files = 'MyPod/Classes/**/*'
-  
+
+  s.source_files = 'MyPod/Classes/**/*.h'
+  s.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-ObjC', 'LIBRARY_SEARCH_PATHS' => "$(SRCROOT)/Pods/libStringee"}
+    s.library = 'libStringee'
+
+
   # s.resource_bundles = {
   #   'MyPod' => ['MyPod/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'MyPod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
+#s.vendored_libraries = 'MyPod/Classes/**/libStringee.a'
+  s.frameworks = 'CoreFoundation', 'VideoToolbox', 'AudioToolbox', 'AVFoundation', 'GLKit'
+  s.libraries = 'icucore', 'stdc++'
+
 end

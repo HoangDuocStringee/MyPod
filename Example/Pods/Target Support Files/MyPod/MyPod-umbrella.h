@@ -1,0 +1,24 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
+
+#import "StringeeAudioManager.h"
+#import "StringeeCall.h"
+#import "StringeeClient.h"
+#import "StringeeLocalVideoView.h"
+#import "StringeeRemoteVideoView.h"
+#import "StringeeRoom.h"
+#import "StringeeRoomStream.h"
+#import "StringeeRoomStreamConfig.h"
+
+FOUNDATION_EXPORT double MyPodVersionNumber;
+FOUNDATION_EXPORT const unsigned char MyPodVersionString[];
+

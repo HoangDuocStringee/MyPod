@@ -1,0 +1,1 @@
+../../../../../MyPod/Classes/StringeeRoom.h

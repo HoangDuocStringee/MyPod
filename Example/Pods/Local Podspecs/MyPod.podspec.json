@@ -1,0 +1,39 @@
+{
+  "name": "MyPod",
+  "version": "0.1.0",
+  "summary": "This is my description of MyPod.",
+  "description": "This is my description of MyPod and it's awesome",
+  "homepage": "https://github.com/HoangDuocStringee/MyPod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "HoangDuoc": "hoangduoc20121540@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/HoangDuocStringee/MyPod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "MyPod/Classes/**/*.h",
+  "pod_target_xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC",
+    "LIBRARY_SEARCH_PATHS": "$(SRCROOT)/Pods/libStringee"
+  },
+  "libraries": [
+    "icucore",
+    "stdc++"
+  ],
+  "public_header_files": "MyPod/Classes/**/*.h",
+  "frameworks": [
+    "CoreFoundation",
+    "VideoToolbox",
+    "AudioToolbox",
+    "AVFoundation",
+    "GLKit"
+  ]
+}
